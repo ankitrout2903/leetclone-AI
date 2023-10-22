@@ -1,17 +1,17 @@
-import { authModalstate } from '@/atoms/authModalAtom';
-import React from 'react';
-import {IoClose} from "react-icons/io5"
-import { useRecoilValue } from 'recoil';
-import Login from './Login';
-import Signup from './Signup';
+import { authModalState } from "@/atoms/authModalAtom";
+import React, { useEffect } from "react";
+import { IoClose } from "react-icons/io5";
+import Login from "./Login";
+import ResetPassword from "./ResetPassword";
+import Signup from "./Signup";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 
-type AuthModalProps = {
-    
-};
+type AuthModalProps = {};
 
-const AuthModal:React.FC<AuthModalProps> = () => {
-    const authModal = useRecoilValue(authModalstate)   
-    return (
+const AuthModal: React.FC<AuthModalProps> = () => {
+	const authModal = useRecoilValue(authModalState);
+	const closeModal = useCloseModal();
+	return (
 		<>
 			<div
 				className='absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60'
@@ -35,5 +35,23 @@ const AuthModal:React.FC<AuthModalProps> = () => {
 			</div>
 		</>
 	);
-}
+};
 export default AuthModal;
+
+function useCloseModal() {
+	const setAuthModal = useSetRecoilState(authModalState);
+
+	const closeModal = () => {
+		setAuthModal((prev) => ({ ...prev, isOpen: false, type: "login" }));
+	};
+
+	useEffect(() => {
+		const handleEsc = (e: KeyboardEvent) => {
+			if (e.key === "Escape") closeModal();
+		};
+		window.addEventListener("keydown", handleEsc);
+		return () => window.removeEventListener("keydown", handleEsc);
+	}, []);
+
+	return closeModal;
+}
