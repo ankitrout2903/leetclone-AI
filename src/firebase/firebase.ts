@@ -7,12 +7,7 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBDkEIlPhM1U11cj1sXArUI0eMhnRAiUzo",
-  authDomain: "leetcode-4d242.firebaseapp.com",
-  projectId: "leetcode-4d242",
-  storageBucket: "leetcode-4d242.appspot.com",
-  messagingSenderId: "775328277715",
-  appId: "1:775328277715:web:739d086affd1beca7c6026"
+ 
 };
 
 // Initialize Firebase
