@@ -4,10 +4,7 @@
 
 This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS, OpenAI API, Firebase, Firestore, and Authentication. It allows users to practice coding problems, translate code between different programming languages, and save their solutions for reference.
 
-
-![Screenshot of App](https://i.ibb.co/b3XDkdN/Full-Stack-1.png)
-<img width="960" alt="image" src="https://github.com/ankitrout2903/leetclone-AI/assets/88599131/1786be36-f4e0-4a34-b62a-2c46183955e7">
-
+https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e?sid=16820dd4-8a24-4c5e-a8f5-640b868a343a
 
 ## Features
 
