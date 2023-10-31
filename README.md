@@ -6,6 +6,7 @@ This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS,
 
 
 ![Screenshot of App](https://i.ibb.co/b3XDkdN/Full-Stack-1.png)
+<img width="960" alt="image" src="https://github.com/ankitrout2903/leetclone-AI/assets/88599131/1786be36-f4e0-4a34-b62a-2c46183955e7">
 
 
 ## Features
