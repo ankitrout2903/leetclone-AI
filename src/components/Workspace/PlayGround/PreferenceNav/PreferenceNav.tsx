@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { AiOutlineFullscreen, AiOutlineFullscreenExit, AiOutlineSetting } from "react-icons/ai";
 import { ISettings } from "../Playground";
-import SettingsModal from "@/components/Modals/SettingsModal";
+// import SettingsModal from "@/components/Modals/SettingsModal";
 
 type PreferenceNavProps = {
 	settings: ISettings;
@@ -65,7 +65,7 @@ const PreferenceNav: React.FC<PreferenceNavProps> = ({ setSettings, settings }) 
 					<div className='preferenceBtn-tooltip'>Full Screen</div>
 				</button>
 			</div>
-			{settings.settingsModalIsOpen && <SettingsModal settings={settings} setSettings={setSettings} />}
+			{/* {settings.settingsModalIsOpen && <SettingsModal settings={settings} setSettings={setSettings} />} */}
 		</div>
 	);
 };
