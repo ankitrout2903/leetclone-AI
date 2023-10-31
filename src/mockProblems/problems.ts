@@ -60,7 +60,7 @@ export const problems: Problem[] = [
 		id: "merge-intervals",
 		title: "Merge Intervals",
 		difficulty: "Medium",
-		category: "Intervals",
+		category: "intervals",
 		order: 7,
 		videoId: "",
 	},

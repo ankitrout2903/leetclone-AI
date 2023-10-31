@@ -107,4 +107,3 @@ export const reverseLinkedList: Problem = {
 	starterFunctionName: "function reverseLinkedList(",
 	order: 2,
 };
- 
