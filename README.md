@@ -4,7 +4,14 @@
 
 This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS, OpenAI API, Firebase, Firestore, and Authentication. It allows users to practice coding problems, translate code between different programming languages, and save their solutions for reference.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2e635c1d1bc5414e94c705def3e4301e?sid=e6075ee9-56e0-48bc-bc44-50ab2a0cf7a6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div>
+    <a href="https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e">
+      <p>Loom Message - 1 November 2023 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/2e635c1d1bc5414e94c705def3e4301e-with-play.gif">
+    </a>
+  </div>
 
 ## Features
 
