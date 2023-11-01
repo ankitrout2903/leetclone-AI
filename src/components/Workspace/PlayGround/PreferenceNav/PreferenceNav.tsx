@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { AiOutlineFullscreen, AiOutlineFullscreenExit, AiOutlineSetting } from "react-icons/ai";
-import { ISettings } from "../Playground";
+// import { ISettings } from '@/components/Workspace/PlayGround/PlayGround';
 import SettingsModal from "@/components/Modals/SettingsModal";
+import { ISettings } from "@/components/Workspace/PlayGround/PlayGround";
+// import { ISettings } from "../Playground";
 
 type PreferenceNavProps = {
 	settings: ISettings;

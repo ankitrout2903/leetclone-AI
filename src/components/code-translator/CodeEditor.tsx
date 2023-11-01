@@ -60,7 +60,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
         minHeight="300px"
         maxHeight="300px"
         extensions={[StreamLanguage.define(go)]}
-        config={config}
+        basicSetup={config}
         onChange={(value) => setCode(value)}
         className="rounded-b-xl"
       />

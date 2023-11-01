@@ -7,7 +7,7 @@ export const config = {
 };
 
 // Define the main function for the serverless function
-export default async function handler(req, res) {
+export default async function handler(req: { json: () => PromiseLike<{ inputLanguage: any; outputLanguage: any; inputCode: any; }> | { inputLanguage: any; outputLanguage: any; inputCode: any; }; }, res: { status: (arg0: number) => { (): any; new(): any; send: { (arg0: string): void; new(): any; }; }; }) {
   try {
     // Parse incoming request data as JSON
     const { inputLanguage, outputLanguage, inputCode } = await req.json();

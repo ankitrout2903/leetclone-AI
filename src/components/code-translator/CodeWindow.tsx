@@ -5,7 +5,7 @@ interface CodeWindowProps {
   code: string;
   setCode: (code: string) => void;
   loading: boolean;
-  handleLanguageChange: (option: { value: string }) => void;
+  handleLanguageChange: (option: { value: string, label: string }) => void;
   language: string;
 }
 
@@ -21,7 +21,7 @@ const CodeWindow: React.FC<CodeWindowProps> = ({
       {/* Rendering the LanguageSelect component with necessary props */}
       <LanguageSelect handleLanguageChange={handleLanguageChange} language={language} disabled={loading} />
       {/* Rendering the CodeEditor component with necessary props */}
-      <CodeEditor code={code} setCode={setCode} editable={!loading} />
+      <CodeEditor code={code} setCode={setCode} editable={!loading} language={language} />
     </div>
   );
 };

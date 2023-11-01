@@ -15,13 +15,18 @@ const TranslatePage: React.FC<TranslatePageProps> = () => {
   const [outputLanguage, setOutputLanguage] = useState('Python');
 
 
-  const handleInputLanguageChange = (option) => {
+  interface optionsType {
+    value : string
+    label : string
+  }
+
+  const handleInputLanguageChange = (option : optionsType) => {
     setInputLanguage(option.value)
     setInputCode('')
     setOutputCode('')
   }
 
-  const handleOutputLanguageChange = (option) => {
+  const handleOutputLanguageChange = (option : optionsType) => {
     setOutputLanguage(option.value)
     setOutputCode('')
   }
