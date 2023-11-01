@@ -4,16 +4,10 @@
 
 This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS, OpenAI API, Firebase, Firestore, and Authentication. It allows users to practice coding problems, translate code between different programming languages, and save their solutions for reference.
 
-<div>
-    <a href="https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e">
-      <p>Loom Message - 1 November 2023 - Watch Video</p>
-    </a>
-    <a href="https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/2e635c1d1bc5414e94c705def3e4301e-with-play.gif">
-    </a>
-  </div>
 
-https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e?t=70&sid=8c334c8b-cae9-4a1c-8f80-492c4e1a0e1e
+    https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e
+     
+
 
 ## Features
 
