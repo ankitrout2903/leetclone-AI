@@ -1,10 +1,13 @@
-import { authModalState } from "@/atoms/authModalAtom";
+// import { authModalState } from "@/atoms/authModalAtom";
 import { auth } from "@/firebase/firebase";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import { toast } from "react-toastify";
+import { authModalState } from "../../atoms/AuthModalAtom";
+
+
 type LoginProps = {};
 
 const Login: React.FC<LoginProps> = () => {
