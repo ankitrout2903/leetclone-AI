@@ -99,7 +99,7 @@ export const OpenAIStream = async (inputLanguage: string, outputLanguage: string
 
   const stream = new ReadableStream({
     async start(controller) {
-      const onParse = (event: { type: string; data: any; }) => {
+      const onParse = (event: { type: string; data?: any; }) => {
         if (event.type === 'event') {
           const data = event.data;
 
@@ -121,9 +121,30 @@ export const OpenAIStream = async (inputLanguage: string, outputLanguage: string
 
       const parser = createParser(onParse);
 
-      for await (const chunk of res.body) {
-        parser.feed(decoder.decode(chunk));
+      const resBody: ReadableStream<Uint8Array> | null = res.body;
+
+if (resBody) {
+  const reader = resBody.getReader();
+  
+  const readChunks = async () => {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) {
+        // All data has been read
+        break;
       }
+
+      if (value) {
+        // Process the Uint8Array chunk
+        parser.feed(decoder.decode(value));
+      }
+    }
+    reader.releaseLock(); // Release the reader when done
+  };
+
+  readChunks();
+}
+
     },
   });
 
