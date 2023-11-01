@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import { toast } from "react-toastify";
-import { authModalState } from "../../atoms/AuthModalAtom";
+import { authModalState } from "../../atoms/authModalAtom";
 
 
 type LoginProps = {};
