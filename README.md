@@ -13,6 +13,8 @@ This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS,
     </a>
   </div>
 
+https://www.loom.com/share/2e635c1d1bc5414e94c705def3e4301e?t=70&sid=8c334c8b-cae9-4a1c-8f80-492c4e1a0e1e
+
 ## Features
 
 - User authentication using Firebase.
