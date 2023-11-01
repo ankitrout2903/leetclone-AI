@@ -1,8 +1,6 @@
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
 import Topbar from "@/components/Topbar/topbar";
-// import Topbar from "@/components/Topbar/Topbar";
 import useHasMounted from "@/hooks/useHasMounted";
-
 import { useState } from "react";
 
 export default function Home() {
