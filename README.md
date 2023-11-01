@@ -1,6 +1,6 @@
 # LeetCode Clone
 
-![LeetCode Clone Logo](https://your-logo-url.com)
+![LeetCode Clone Logo](https://github.com/ankitrout2903/leetclone-AI/blob/master/public/logo.png?raw=true)
 
 This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS, OpenAI API, Firebase, Firestore, and Authentication. It allows users to practice coding problems, translate code between different programming languages, and save their solutions for reference.
 
@@ -12,6 +12,7 @@ This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS,
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/2e635c1d1bc5414e94c705def3e4301e-with-play.gif">
     </a>
   </div>
+
 ## Features
 
 - User authentication using Firebase.
