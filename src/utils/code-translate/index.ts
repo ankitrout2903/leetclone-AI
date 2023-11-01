@@ -2,7 +2,7 @@ import endent from 'endent';
 import { createParser } from 'eventsource-parser';
 const apiKey = process.env.OPENAI_API_KEY;
 
-const createPrompt = (inputLanguage, outputLanguage, inputCode) => {
+const createPrompt = (inputLanguage: string, outputLanguage: string, inputCode: any) => {
   if (inputLanguage === 'Natural Language') {
     return endent`
     You are an expert programmer in all programming languages. Translate the natural language to "${outputLanguage}" code. Do not include \`\`\`.
@@ -64,7 +64,7 @@ const createPrompt = (inputLanguage, outputLanguage, inputCode) => {
   }
 };
 
-export const OpenAIStream = async (inputLanguage, outputLanguage, inputCode) => {
+export const OpenAIStream = async (inputLanguage: string, outputLanguage: string, inputCode: any) => {
   const prompt = createPrompt(inputLanguage, outputLanguage, inputCode);
 
   const system = { role: 'system', content: prompt };
@@ -99,7 +99,7 @@ export const OpenAIStream = async (inputLanguage, outputLanguage, inputCode) => 
 
   const stream = new ReadableStream({
     async start(controller) {
-      const onParse = (event) => {
+      const onParse = (event: { type: string; data: any; }) => {
         if (event.type === 'event') {
           const data = event.data;
 
