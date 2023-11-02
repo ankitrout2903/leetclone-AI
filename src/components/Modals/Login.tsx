@@ -1,13 +1,12 @@
-// import { authModalState } from "@/atoms/authModalAtom";
 // @ts-nocheck
-
 import { auth } from "@/firebase/firebase";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import { toast } from "react-toastify";
-import { authModalState } from "../../atoms/authModalAtom";
+// import { authModalState } from "../../atoms/authModalAtom";
+import { authModalState } from "@/atoms/authModalAtom";
 
 type authModalState = {
 	isOpen: boolean;
