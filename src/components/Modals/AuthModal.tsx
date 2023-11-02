@@ -5,6 +5,7 @@ import Login from "./Login";
 import ResetPassword from "./ResetPassword";
 import Signup from "./Signup";
 import { useRecoilValue, useSetRecoilState } from "recoil";
+// @ts-ignore
 import { authModalState } from "../../atoms/authModalAtom";
 
 type AuthModalState = {
