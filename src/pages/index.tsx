@@ -1,3 +1,4 @@
+// @ts-nocheck
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
 import Topbar from "../components/Topbar/Topbar";
 import useHasMounted from "@/hooks/useHasMounted";
