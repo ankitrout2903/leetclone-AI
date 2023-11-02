@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Topbar from "./src/components/Topbar/Topbar";
+import Topbar from "@/components/Topbar/Topbar";
 import Workspace from "@/components/Workspace/Workspace";
 import useHasMounted from "@/hooks/useHasMounted";
 import { problems } from "@/utils/problems";
