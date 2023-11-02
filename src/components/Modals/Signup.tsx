@@ -1,6 +1,6 @@
 // @ts-nocheck
 // import { authModalState } from "../../atoms/authModalAtom";
-import { authModalState } from "@/atoms/authModalAtom";
+// import { authModalState } from "@/atoms/authModalAtom";
 import { auth, firestore } from "@/firebase/firebase";
 import { useEffect, useState } from "react";
 import { useSetRecoilState } from "recoil";
@@ -8,6 +8,23 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useRouter } from "next/router";
 import { doc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { atom } from "recoil";
+
+type AuthModalState = {
+	isOpen: boolean;
+	type: "login" | "register" | "forgotPassword";
+};
+
+const initalAuthModalState: AuthModalState = {
+	isOpen: false,
+	type: "login",
+};
+
+export const authModalState = atom<AuthModalState>({
+	key: "authModalState",
+	default: initalAuthModalState,
+});
+
 
 type SignupProps = {};
 

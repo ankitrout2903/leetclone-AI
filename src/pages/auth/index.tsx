@@ -1,6 +1,6 @@
 // @ts-nocheck
 // import { authModalState } from "../../atoms/authModalAtom";
-import { authModalState } from "@/atoms/authModalAtom";
+// import { authModalState } from "@/atoms/authModalAtom";
 import AuthModal from "@/components/Modals/AuthModal";
 import Navbar from "@/components/Navbar/Navbar";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -9,6 +9,23 @@ import { useRecoilValue } from "recoil";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { atom } from "recoil";
+
+type AuthModalState = {
+	isOpen: boolean;
+	type: "login" | "register" | "forgotPassword";
+};
+
+const initalAuthModalState: AuthModalState = {
+	isOpen: false,
+	type: "login",
+};
+
+export const authModalState = atom<AuthModalState>({
+	key: "authModalState",
+	default: initalAuthModalState,
+});
+
 type AuthPageProps = {};
 
 const AuthPage: React.FC<AuthPageProps> = () => {

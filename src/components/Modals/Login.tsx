@@ -6,12 +6,24 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import { toast } from "react-toastify";
 // import { authModalState } from "../../atoms/authModalAtom";
-import { authModalState } from "@/atoms/authModalAtom";
+// import { authModalState } from "@/atoms/authModalAtom";
+import { atom } from "recoil";
 
-type authModalState = {
+type AuthModalState = {
 	isOpen: boolean;
 	type: "login" | "register" | "forgotPassword";
 };
+
+const initalAuthModalState: AuthModalState = {
+	isOpen: false,
+	type: "login",
+};
+
+export const authModalState = atom<AuthModalState>({
+	key: "authModalState",
+	default: initalAuthModalState,
+});
+
 
 
 type LoginProps = {};

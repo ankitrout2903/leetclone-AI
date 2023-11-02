@@ -1,10 +1,27 @@
 // @ts-nocheck
 // import { authModalState } from "../../atoms/authModalAtom";
-import { authModalState } from "@/atoms/authModalAtom";
+// import { authModalState } from "@/atoms/authModalAtom";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useSetRecoilState } from "recoil";
+import { atom } from "recoil";
+
+type AuthModalState = {
+	isOpen: boolean;
+	type: "login" | "register" | "forgotPassword";
+};
+
+const initalAuthModalState: AuthModalState = {
+	isOpen: false,
+	type: "login",
+};
+
+export const authModalState = atom<AuthModalState>({
+	key: "authModalState",
+	default: initalAuthModalState,
+});
+
 type NavbarProps = {};
 
 const Navbar: React.FC<NavbarProps> = () => {

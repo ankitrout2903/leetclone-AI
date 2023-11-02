@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { authModalState } from "@/atoms/authModalAtom";
+// import { authModalState } from "@/atoms/authModalAtom";
 import React, { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import Login from "./Login";
@@ -9,11 +9,23 @@ import Signup from "./Signup";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 // @ts-ignore
 // import { authModalState } from "../../atoms/authModalAtom";
+import { atom } from "recoil";
 
-type authModalState = {
+type AuthModalState = {
 	isOpen: boolean;
 	type: "login" | "register" | "forgotPassword";
 };
+
+const initalAuthModalState: AuthModalState = {
+	isOpen: false,
+	type: "login",
+};
+
+export const authModalState = atom<AuthModalState>({
+	key: "authModalState",
+	default: initalAuthModalState,
+});
+
 
 type AuthModalProps = {};
 
