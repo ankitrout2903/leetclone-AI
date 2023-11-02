@@ -8,6 +8,7 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { authModalState } from "../../atoms/authModalAtom";
 
 
+
 type AuthModalProps = {};
 
 const AuthModal: React.FC<AuthModalProps> = () => {
