@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 import { auth } from "@/firebase/firebase";
 import Link from "next/link";
 import React from "react";
