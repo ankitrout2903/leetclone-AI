@@ -7,7 +7,10 @@ import Signup from "./Signup";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { authModalState } from "../../atoms/authModalAtom";
 
-
+type AuthModalState = {
+	isOpen: boolean;
+	type: "login" | "register" | "forgotPassword";
+};
 
 type AuthModalProps = {};
 
