@@ -8,7 +8,7 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 // @ts-ignore
 import { authModalState } from "../../atoms/authModalAtom";
 
-type AuthModalState = {
+type authModalState = {
 	isOpen: boolean;
 	type: "login" | "register" | "forgotPassword";
 };
