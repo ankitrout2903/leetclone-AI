@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Logout from "../Buttons/Logout";
-import { useSetRecoilState } from "recoil";
+import { useSetRecoilState, atom } from "recoil";
 // import { authModalState } from "../../atoms/authModalAtom";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -13,7 +13,7 @@ import Timer from "../Timer/Timer";
 import { useRouter } from "next/router";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
-import { atom } from "recoil";
+// import { atom } from "recoil";
 
 type AuthModalState = {
 	isOpen: boolean;
