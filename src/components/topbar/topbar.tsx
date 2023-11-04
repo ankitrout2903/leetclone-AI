@@ -31,11 +31,11 @@ export const authModalState = atom<AuthModalState>({
 });
 
 
-type TopbarProps = {
+type TopBarProps = {
 	problemPage?: boolean;
 };
 
-const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
+const TopBar: React.FC<TopBarProps> = ({ problemPage }) => {
 	const [user] = useAuthState(auth);
 	const setAuthModalState = useSetRecoilState(authModalState);
 	const router = useRouter();
@@ -128,4 +128,4 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 		</nav>
 	);
 };
-export default Topbar;
+export default TopBar;
