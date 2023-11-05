@@ -1,5 +1,4 @@
-// @ts-nocheck
-import TopBar from "../../components/TopBar/Topbar";
+import Topbar from "@/components/Topbar/Topbar";
 import Workspace from "@/components/Workspace/Workspace";
 import useHasMounted from "@/hooks/useHasMounted";
 import { problems } from "@/utils/problems";
@@ -17,7 +16,7 @@ const ProblemPage: React.FC<ProblemPageProps> = ({ problem }) => {
 
 	return (
 		<div>
-			<TopBar problemPage />
+			<Topbar problemPage />
 			<Workspace problem={problem} />
 		</div>
 	);
