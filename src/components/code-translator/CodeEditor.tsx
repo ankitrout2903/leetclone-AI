@@ -2,7 +2,7 @@ import { StreamLanguage } from '@codemirror/language';
 import { go } from '@codemirror/legacy-modes/mode/go';
 import CodeMirror from '@uiw/react-codemirror';
 import { useEffect, useState } from 'react';
-import { vscodeDark } from "@uiw/codemirror-theme-vscode";
+import { vscodeDark } from '@uiw/codemirror-theme-vscode';
 
 interface CodeEditorProps {
   code?: string;
@@ -37,13 +37,14 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
     matchBrackets: true,
     extraKeys: { 'Ctrl-Space': 'autocomplete' },
     theme: vscodeDark,
+    // theme: eclipse,
     indent: {
       auto: true,
     },
   };
 
   return (
-    <div className="relative border-2 border-t-0 border-black rounded-b-lg">
+    <div className="relative border-2 border-t-0 border-black rounded-b-lg h-[100%]">
       <button
         className="absolute right-1 top-1 z-10 rounded bg-[#2da035] p-1 text-xs text-white hover:bg-[#2D2E3A] active:bg-[#2D2E3A]"
         onClick={() => {
@@ -57,12 +58,14 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
       <CodeMirror
         editable={editable}
         value={code}
-        minHeight="300px"
-        maxHeight="300px"
+        minHeight="330px"
+        height='330px'
+        maxHeight="330px"
         extensions={[StreamLanguage.define(go)]}
         basicSetup={config}
         onChange={(value) => setCode(value)}
         className="rounded-b-xl"
+        
       />
     </div>
   );
