@@ -20,6 +20,22 @@ This is a LeetCode clone project created with Next.js, TypeScript, Tailwind CSS,
 - Firestore integration to save and retrieve user solutions.
 - A clean and responsive user interface designed with Tailwind CSS.
 
+## Tech Stack
+
+The LeetCode Clone project you described uses the following technologies in its tech stack:
+
+1. **Next.js**: A popular React framework for building web applications, offering server-side rendering, static site generation, and other features.
+
+2. **Tailwind CSS**: A utility-first CSS framework that helps in creating responsive and stylish user interfaces.
+
+3. **OpenAI API**: Used for the code translation feature, allowing users to translate code between different programming languages.
+
+4. **Firebase**: Used for user authentication, providing a secure and easy-to-integrate solution for user management.
+
+5. **Firestore**: Integrated for data storage and retrieval, typically used to save and manage user solutions for coding problems.
+
+6. **Docker**: You mentioned Docker, which is likely used for containerization and deployment of the application, making it easier to manage and scale the application in various environments.
+
 ## Getting Started
 
 To get started with this project, follow the steps below:
